@@ -4,15 +4,11 @@
 				<div class="sidemenu-logo">
 					<a class="main-logo" href="">
 
-					
 						<img src="assets/img/brand/ap2.png" class="header-brand-img desktop-logo" alt="logo">
 						<img src="assets/img/brand/ap2.png" class="header-brand-img icon-logo" alt="logo">
 					
-						
-
-
 						<img src="assets/img/brand/logo-light.png" class="header-brand-img desktop-logo theme-logo" alt="logo">
-						<img src="URL::asset('assets/img/brand/icon-light.png" class="header-brand-img icon-logo theme-logo" alt="logo">
+						<img src="assets/img/brand/icon-light.png" class="header-brand-img icon-logo theme-logo" alt="logo">
 					</a>
 				</div>
 				<div class="main-sidebar-body">
@@ -22,10 +18,11 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link with-sub" href=""><i class="far fa-address-book"></i><span class="sidemenu-label">Donor</span><i class="angle fe fe-chevron-right"></i></a>
+							<a class="nav-link with-sub" ><i class="far fa-address-book"></i><span class="sidemenu-label">Donor</span><i class="angle fe fe-chevron-right"></i></a>
 							<ul class="nav-sub">
 								<li class="nav-sub-item">
-									<a class="nav-sub-link" href="">Manage Donor</a>
+								<router-link to="/donorlist" class="nav-sub-link">Manage Donor</router-link>
+									<!-- <a class="nav-sub-link" href="">Manage Donor</a> -->
 								</li>
 								<li class="nav-sub-item">
 									<a class="nav-sub-link">Donor Donation</a>
@@ -49,7 +46,8 @@
 							<a class="nav-link with-sub" href=""><i class="far fa-address-card"></i><span class="sidemenu-label">Patron</span><i class="angle fe fe-chevron-right"></i></a>
 							<ul class="nav-sub">
 								<li class="nav-sub-item">
-									<a class="nav-sub-link" href="">Create Patron</a>
+								 <router-link to="/patron" class="nav-sub-link">Create Patron</router-link>
+									<!-- <a class="nav-sub-link" href="">Create Patron</a> -->
 								</li>
 								<li class="nav-sub-item">
 									<a class="nav-sub-link">Modify Patron</a>
@@ -218,9 +216,13 @@
 			<!-- End Sidemenu -->
 
 			<script type="text/javascript">
+
+   		
 	 export default {
         mounted(){
 
+
+           
             console.log('Component mounted.')
         }
     }

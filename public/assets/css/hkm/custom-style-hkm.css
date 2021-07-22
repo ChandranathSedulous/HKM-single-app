@@ -1180,7 +1180,7 @@ body{
 	margin-bottom: 0 !important;
 }
 .error-bg{
-	background: url(../img/pngs/bg.png);
+	background: url(/img/pngs/bg.png);
     background-position: center;
     background-size: cover;
 }
@@ -1246,7 +1246,7 @@ body{
 }
 .owl-carousel .owl-item {
 	position: relative;
-	cursor: url(../plugins/owl-carousel/cursor.png), move;
+	cursor: url(/plugins/owl-carousel/cursor.png), move;
 	overflow: hidden;
 }
 .owl-nav {
@@ -2185,18 +2185,18 @@ select.form-control.select-sm {
 	height:12px;
 }
 .card-blog-overlay1 {
-	background: url('../img/media/3.jpg');
+	background: url('/img/media/3.jpg');
 	background-size: cover;
 }
 .card-blog-overlay2 {
-	background: url('../img/media/1.jpg');
+	background: url('/img/media/1.jpg');
 	background-size: cover;
 }
 .z-index2{
 	z-index:2;
 }
 .card-blog-overlay {
-	background: url('../img/media/2.jpg');
+	background: url('/img/media/2.jpg');
 	background-size: cover;
 	position:relative;
 }

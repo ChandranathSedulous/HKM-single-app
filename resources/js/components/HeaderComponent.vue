@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<div class="main-header side-header sticky">
 					<div class="container-fluid">
 						<div class="main-header-left">
@@ -20,7 +21,7 @@
 						</div>
 						
 							<div class="hkm-ap-toggle hkmtoap">
-								<input type="checkbox" data-toggle="toggle" data-on="HKM" data-off="AP" data-onstyle="success" data-offstyle="danger" id="hkmtoapid">
+								<input type="checkbox" data-toggle="toggle" data-on="HKM" data-off="AP" data-onstyle="success" data-offstyle="danger" id="hkmtoapid2" >
 							</div>
 						<div class="main-header-right">
 						
@@ -85,21 +86,86 @@
 									<a class="dropdown-item" href="">
 										<i class="fe fe-compass"></i> Activity
 									</a>
-									<a class="dropdown-item" href="signin.html">
+									<a class="dropdown-item" v-on:click="signout" href="javascript:void(0)">
 										<i class="fe fe-power"></i> Sign Out
 									</a>
 								</div>
 							</div>
 							</div>							
 						</div>
+
 					</div>
+					
+				
 				</div>
+				
+				<div class="container-fluid">
+				<!--   <Dashboard></Dashboard> -->
+				
+		<router-view></router-view> 
+				  <footer-component></footer-component>
+                    <a href="#top" id="back-to-top"><i class="fe fe-arrow-up"></i></a>
+
+				</div>
+			</div>
+
 </template>
 <script type="text/javascript">
+	 import Dashboard from './dashboard'
+	 import FooterComponent from './FooterComponent'
+	 
 	 export default {
+
+
+	 	components:{Dashboard,FooterComponent},
+
+	 	 methods:{
+
+          changeparam:function(event){
+
+            console.log('change')
+          },
+          signout:function(event){
+
+          	console.log(456);
+          }
+
+
+        },
         mounted(){
 
-            console.log('Component mounted.')
+        	 $('#hkmtoapid2').bootstrapToggle({
+          
+            });
+        	 
+        	$("#hkmtoapid2").change(function(){
+
+               var flag = document.getElementById("hkmtoapid2").checked;
+
+               // if(flag){
+                 
+               //    localStorage.setItem('cond','HKM')
+                   
+               //    console.log('HKM');
+
+               // }else{
+                  
+               //    console.log('Ap')
+
+               //    localStorage.setItem('cond','Ap')
+
+
+               // }
+
+              
+
+        	})
         }
+       
     }
 </script>
+<style scoped lang="css">
+  @import '~/assets/css/ap/ap.css'
+    @import '~/assets/css/ap/custom-style-ap.css'
+    @import '~/assets/plugins/sidemenu/ap/sidemenuap.css'
+</style>

@@ -22,7 +22,7 @@
 									<input class="form-control" placeholder="Enter your password" type="password">
 								</div>
 
-								<div class="hkm-ap-toggle hkmtoap">
+								<div class="hkm-ap-toggle-login hkmtoap">
 									<input type="checkbox" checked data-toggle="toggle" data-on="HKM" data-off="AP" data-onstyle="success" data-offstyle="danger" id="hkmtoapid" name="hkmtoapid">
 								</div>
 
@@ -39,20 +39,50 @@
 	</div>
 </div>
 </template>
+
 <script type="text/javascript">
+	
+	require('/assets/plugins/bootstrap-toggle/js/bootstraptoggle.min.js');
+
 	export default {
+
+
 
 		 mounted(){
 
             console.log('Component mounted.')
+
+            $('#hkmtoapid').bootstrapToggle({
+          
+            });
         },
 
         methods:{
 
         	login:function(){
 
-        		console.log(this.$router.push('/admin'));
+                
+        		console.log(this.$router.push({path: '/admin'}));
         	}
         }
 	}
 </script>
+<style scoped lang="css">
+
+	 /*@import '/assets/plugins/bootstrap-toggle/css/bootstrap4-toggle.min.css'
+
+	 /*@import "~/assets/plugins/sidemenu/ap/sidemenuap.css";
+	  @import "~/assets/plugins/sidemenu/ap/sidemenuap.css";*/
+</style>
+<style scoped>
+	.hkmtoap .toggle.btn
+    {
+        width: 50% !important;
+    }
+    .page
+    {
+        background-image: url('/assets/img/brand/login-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+</style>

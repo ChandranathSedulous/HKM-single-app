@@ -6,9 +6,29 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue').default;
 
 import router from './router';
+
+// require('/assets/plugins/ionicons/ionicons.js');
+
+
+// require('/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js');
+
+// require('/assets/plugins/rating/jquery.rating-stars.js');
+
+// require('/assets/plugins/sidemenu/sidemenu.js');
+
+// require('/assets/plugins/sidebar/sidebar.js');
+
+// require('/assets/js/sticky.js');
+
+// require('/assets/js/custom.js');
+
+// require('/assets/plugins/select2/js/select2.min.js');
+
+// require('/assets/plugins/bootstrap-toggle/js/bootstraptoggle.min.js');
 
 /**
  * The following block of code may be used to automatically register your
@@ -23,12 +43,7 @@ import router from './router';
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
- 
  import Example from './components/ExampleComponent.vue';
-
- 
-
- 
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
